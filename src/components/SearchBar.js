@@ -1,5 +1,6 @@
 import React from 'react'
 import uuid from 'uuid/v4'
+
 class SearchBar extends React.Component {
     state = {term: ''};
 
@@ -17,11 +18,14 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div>
-            <input
-                type="text"
-                value={this.state.term}
-                onChange={event => this.setState({term: event.target.value})}/>
-                <button onClick={this.onClick}>Add</button>
+                <div className="ui input focus">
+                    <input
+                        placeholder="Activity"
+                        type="text"
+                        value={this.state.term}
+                        onChange={event => this.setState({term: event.target.value})}/>
+                </div>
+                <button className="small ui button" onClick={this.onClick}>Add</button>
             </div>
         );
     }
