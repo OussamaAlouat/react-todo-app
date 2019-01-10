@@ -1,5 +1,6 @@
 import React from 'react'
 import ActivitiesList from "./ActivitiesList";
+import SearchBar from "./SearchBar";
 
 class App extends React.Component {
 
@@ -13,12 +14,11 @@ class App extends React.Component {
 
 
 
-    setActivity = () => {
+    setActivity = term => {
         this.setState( state => {
-           const activities = [...state.activities, state.currentActivity];
+           const activities = [...state.activities, term];
            return {
-               activities,
-               currentActivity: ''
+               activities
            }
         });
     };
@@ -27,12 +27,7 @@ class App extends React.Component {
         return (
             <div>
                 <ActivitiesList activitiesToDo={this.state.activities}/>
-                <input
-                    type="text"
-                    value={this.state.currentActivity}
-                    onChange={event => this.setState({currentActivity: event.target.value})}
-                />
-                <button onClick={this.setActivity}>Add</button>
+                <SearchBar onClick={this.setActivity}/>
             </div>
         )
     }
