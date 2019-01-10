@@ -1,14 +1,13 @@
 import React from 'react'
 import ActivitiesList from "./ActivitiesList";
 import SearchBar from "./SearchBar";
-
+import './App.css'
 class App extends React.Component {
 
     constructor () {
         super();
         this.state = {
-            activities: [],
-            currentActivity: ''
+            activities: []
         };
     }
 
@@ -25,7 +24,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className=" ui container app">
                 <ActivitiesList activitiesToDo={this.state.activities}/>
                 <SearchBar onClick={this.setActivity}/>
             </div>
