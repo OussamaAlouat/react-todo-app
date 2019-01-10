@@ -1,4 +1,5 @@
 import React from 'react'
+import ActivitiesList from "./ActivitiesList";
 
 class App extends React.Component {
 
@@ -20,17 +21,12 @@ class App extends React.Component {
                currentActivity: ''
            }
         });
-
-        console.log(this.state)
     };
 
     render() {
-
-        const activitiesToDo = this.state.activities.map((val) => <li key={val}>{val}</li>)
-
         return (
             <div>
-                <div>{activitiesToDo}</div>
+                <ActivitiesList activitiesToDo={this.state.activities}/>
                 <input
                     type="text"
                     value={this.state.currentActivity}
