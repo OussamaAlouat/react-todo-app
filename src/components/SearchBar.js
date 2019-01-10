@@ -1,10 +1,16 @@
 import React from 'react'
-
+import uuid from 'uuid/v4'
 class SearchBar extends React.Component {
     state = {term: ''};
 
     onClick = (event) => {
-        this.props.onClick(this.state.term)
+
+        const activity = {
+            id: uuid(),
+            value: this.state.term,
+            completed: false
+        };
+        this.props.onClick(activity);
         this.setState({term: ''})
     };
 
