@@ -1,9 +1,10 @@
 import React from 'react'
+import ActivityItem from "./ActivityItem";
 
 const ActivitiesList = (props) =>  {
     const activitiesToDo = props.activitiesToDo.map((activity) =>{
-       return <li key={activity.id}>{activity.value}</li>
+       return <ActivityItem key={activity.id} activity={activity}></ActivityItem>
     });
-    return <div className="ui relaxed divided list">{activitiesToDo}</div>
+    return <div>{activitiesToDo}</div>
 };
 export default ActivitiesList;

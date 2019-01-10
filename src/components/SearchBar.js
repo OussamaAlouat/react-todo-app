@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
         return (
             <div>
                 <div className="ui input focus">
+                    <label className="ui right pointing label"> Input the activity to do </label>
                     <input
                         placeholder="Activity"
                         type="text"
