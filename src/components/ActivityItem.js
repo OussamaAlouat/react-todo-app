@@ -8,13 +8,22 @@ class ActivityItem extends React.Component {
         this.props.onRemove(activityToRemove)
     };
 
+    onComplete = () => {
+        const activityToComplete = this.props.activity;
+        this.props.onComplete(activityToComplete);
+    };
+
     render() {
         return (
             <div className="item">
                 <div className="content">
                     <i className="large tasks middle aligned icon"></i>
                     <span className="ml-03r">{this.props.activity.value}</span>
-                    <button style={{marginLeft: '0.3rem'}} className="mini ui button" onClick={this.onRemove}>Remove
+                    <button style={{marginLeft: '0.3rem'}} className="mini ui button" onClick={this.onRemove}>
+                        Remove
+                    </button>
+                    <button style={{marginLeft: '0.3rem'}} className="mini ui button" onClick={this.onComplete}>
+                        Complete
                     </button>
                 </div>
             </div>
