@@ -1,5 +1,6 @@
 import React from 'react'
 import uuid from 'uuid/v4'
+import './SearchBar.css'
 
 class SearchBar extends React.Component {
     state = {term: ''};
@@ -19,14 +20,14 @@ class SearchBar extends React.Component {
         return (
             <div>
                 <div className="ui input focus">
-                    <label className="ui right pointing label"> Input the activity to do </label>
-                    <input
+                    <label className="ui right pointing label al-self"> Input the activity to do </label>
+                    <input className="mini ui"
                         placeholder="Activity"
                         type="text"
                         value={this.state.term}
                         onChange={event => this.setState({term: event.target.value})}/>
                 </div>
-                <button className="small ui button" onClick={this.onClick}>Add</button>
+                <button style={{marginLeft: '0.3rem'}} className="small ui button" onClick={this.onClick}>Add</button>
             </div>
         );
     }
