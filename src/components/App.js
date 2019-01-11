@@ -12,6 +12,10 @@ class App extends React.Component {
     }
 
 
+    onRemove = (item) => {
+        const provisionalActivities = this.state.activities;
+        this.setState({activities: provisionalActivities.filter((val)=> val.id !== item.id)})
+    };
 
     setActivity = term => {
         this.setState( state => {
@@ -25,7 +29,7 @@ class App extends React.Component {
     render() {
         return (
             <div className=" ui container app">
-                <ActivitiesList activitiesToDo={this.state.activities}/>
+                <ActivitiesList onRemove={this.onRemove} activitiesToDo={this.state.activities}/>
                 <SearchBar onClick={this.setActivity}/>
             </div>
         )
