@@ -5,3 +5,7 @@
 w-01r {
     width: 1rem;
 }
+
+.completed {
+    background-color: palegreen;
+}
