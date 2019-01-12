@@ -27,7 +27,7 @@ class ActivityItem extends React.Component {
                     </div>
 
                     <div className="mini ui vertical animated button" tabIndex="0" onClick={this.onComplete}>
-                        <div className="hidden content">Complete</div>
+                        <div className="hidden content">Done</div>
                         <div className="visible content">
                             <i className="ui check icon"></i>
                         </div>
