@@ -30,7 +30,10 @@ class App extends React.Component {
   onComplete = term => {
     const provisionalActivities = this.state.activities;
     const data = provisionalActivities.map((val) => {
-      val.completed = val.id === term.id ? true : val.completed;
+      if(val.id === term.id) {
+        val.completed = !val.completed;
+      } 
+
       return val
     });
 
