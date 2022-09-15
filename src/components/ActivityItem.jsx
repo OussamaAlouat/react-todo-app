@@ -17,7 +17,7 @@ class ActivityItem extends React.Component {
       <div className="item">
         <div className={this.props.activity.completed ? 'content completed' : 'content'}>
           <i className="large tasks middle aligned icon"></i>
-          <span className="ml-03r">{this.props.activity.value}</span>
+          <span className="ml-03r mr-03r">{this.props.activity.value}</span>
           <div className="mini ui vertical animated button" tabIndex="0" onClick={this.onRemove}>
             <div className="hidden content">Remove</div>
             <div className="visible content">
