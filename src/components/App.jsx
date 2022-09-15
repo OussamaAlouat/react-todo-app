@@ -4,11 +4,11 @@ import SearchBar from "./SearchBar";
 import './App.css'
 
 class App extends React.Component {
-
   constructor() {
     super();
     this.state = {
-        activities: []
+        activities: [],
+        title: 'REACT TODO APP',
     };
   }
 
@@ -42,6 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <div className=" ui container app">
+        <h2 className='title'>{ this.state.title }</h2>
         <ActivitiesList 
           onComplete={this.onComplete} onRemove={this.onRemove}
           activitiesToDo={this.state.activities}

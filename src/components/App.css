@@ -2,3 +2,14 @@
   text-align: center;
   margin-top: 1%;
 }
+
+.container {
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
