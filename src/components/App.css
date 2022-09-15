@@ -3,6 +3,10 @@
   margin-top: 1%;
 }
 
+html {
+  background: aliceblue;
+}
+
 .container {
   padding-top: 10px;
   overflow: hidden;
