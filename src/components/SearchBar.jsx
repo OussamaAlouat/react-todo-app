@@ -3,7 +3,7 @@ import uuid from 'uuid/v4'
 import './SearchBar.css'
 
 class SearchBar extends React.Component {
-    state = {term: ''};
+  state = {term: ''};
 
     onClick = (event) => {
 
