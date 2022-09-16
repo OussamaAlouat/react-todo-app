@@ -1,4 +1,19 @@
 .app div{
-    text-align: center;
-    margin-top: 1%;
+  text-align: center;
+  margin-top: 1%;
+}
+
+html {
+  background: aliceblue;
+}
+
+.container {
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
