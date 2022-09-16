@@ -1,11 +1,15 @@
 .ml-03r {
-    margin-left: 0.3rem;
+  margin-left: 0.3rem;
 }
 
-w-01r {
-    width: 1rem;
+.mr-03r {
+  margin-right: 0.3rem;
+}
+
+.w-01r {
+  width: 1rem;
 }
 
 .completed {
-    background-color: palegreen;
+  background-color: palegreen;
 }

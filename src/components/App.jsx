@@ -4,11 +4,11 @@ import SearchBar from "./SearchBar";
 import './App.css'
 
 class App extends React.Component {
-
   constructor() {
     super();
     this.state = {
-        activities: []
+        activities: [],
+        title: 'REACT TODO APP',
     };
   }
 
@@ -30,7 +30,10 @@ class App extends React.Component {
   onComplete = term => {
     const provisionalActivities = this.state.activities;
     const data = provisionalActivities.map((val) => {
-      val.completed = val.id === term.id ? true : val.completed;
+      if(val.id === term.id) {
+        val.completed = !val.completed;
+      } 
+
       return val
     });
 
@@ -42,6 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div className=" ui container app">
+        <h2 className='title'>{ this.state.title }</h2>
         <ActivitiesList 
           onComplete={this.onComplete} onRemove={this.onRemove}
           activitiesToDo={this.state.activities}
